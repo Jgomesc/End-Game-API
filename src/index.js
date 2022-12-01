@@ -12,17 +12,22 @@ server.post('/jogadores', (req, resp) => {
      
     try{
        
-        let {j: jogador, t: time, n: numero} = req.body;
+        let {jogador: jogador, clube: time, numero: numero} = req.body;
 
        //let j = req.body.j;
        //let t = req.body.t;
        //let n = req.body.n;
 
 
-       const x = jogador + time + numero;
-        
-        resp.send({
-            infos: x
+       const x = jogador;
+       const y = time;
+       const z = numero; 
+
+       resp.send({
+            Jogador: x,
+            Clube: y,
+                   Numero: z
+           
         })
 
     }
